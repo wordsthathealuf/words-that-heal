@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Words That Heal is a student organization dedicated to language access, communication, and compassionate healthcare." />
+  <title>Words That Heal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --navy:#15365d;
+  --blue:#2f80ed;
+  --teal:#14a6a6;
+  --green:#2e9b58;
+  --orange:#f28a2e;
+  --red:#e9544f;
+  --purple:#7b61c9;
+  --cream:#fffaf3;
+  --ink:#1d2630;
+  --muted:#61707d;
+  --white:#ffffff;
+  --line:#e9e5df;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--white);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:0 auto}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.06)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;min-height:74px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--navy)}
+.brand-mark{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--red),var(--orange),var(--green),var(--blue));color:white;font-size:13px;letter-spacing:.5px}
+.brand-text{font-size:1.1rem}
+.nav-links{display:flex;align-items:center;gap:28px;font-weight:600;font-size:.95rem}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{padding:10px 16px;border-radius:999px;background:var(--navy);color:#fff!important}
+.menu-toggle{display:none;border:0;background:none;font-size:1.5rem;color:var(--navy)}
+.hero{background:linear-gradient(180deg,var(--cream),#fff);padding:92px 0 80px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.eyebrow,.section-kicker{display:inline-block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:800;color:var(--red);margin-bottom:12px}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.08;color:var(--navy);margin:0}
+h1{font-size:clamp(3rem,6vw,5.6rem);letter-spacing:-.04em}
+h1 span{color:var(--teal)}
+h2{font-size:clamp(2.2rem,4vw,3.7rem);letter-spacing:-.03em}
+h3{font-size:1.35rem}
+.hero-text{font-size:1.15rem;color:var(--muted);max-width:720px;margin:26px 0 0}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:999px;font-weight:700;border:2px solid transparent;transition:.2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--navy);color:#fff}.btn-primary:hover{background:#0d294b}
+.btn-secondary{border-color:var(--navy);color:var(--navy);background:#fff}
+.microcopy{margin-top:18px;font-size:.9rem;color:var(--muted)}
+.hero-art{position:relative;min-height:440px}
+.orbit{position:absolute;border-radius:50%;border:2px dashed rgba(21,54,93,.15)}
+.orbit-1{width:410px;height:410px;right:0;top:10px}.orbit-2{width:310px;height:310px;right:50px;top:60px}
+.heart-card{position:absolute;right:85px;top:110px;width:240px;padding:30px;border-radius:32px;background:#fff;box-shadow:0 25px 70px rgba(21,54,93,.14);text-align:center}
+.heart{font-size:4.8rem;color:var(--red);line-height:1}.pulse{font-size:2rem;color:var(--blue);letter-spacing:-8px}.heart-label{margin-top:14px;font-weight:700;color:var(--navy)}
+.speech{position:absolute;padding:12px 18px;border-radius:20px;font-weight:800;color:white;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.s1{background:var(--blue);right:20px;top:52px}.s2{background:var(--orange);left:40px;top:120px}.s3{background:var(--green);right:10px;bottom:80px}.s4{background:var(--purple);left:45px;bottom:40px}
+.section{padding:92px 0}.section-soft{background:#f8fbfb}.split{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}.prose p{margin-top:0;margin-bottom:20px;color:var(--muted);font-size:1.08rem}.section-heading{max-width:760px;margin-bottom:42px}.section-heading p,.lead{color:var(--muted);font-size:1.08rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:22px;padding:28px;box-shadow:0 12px 36px rgba(21,54,93,.06)}.card p{color:var(--muted);margin-bottom:0}.card-icon{font-size:1.8rem;margin-bottom:14px}.accent-red{border-top-color:var(--red)}.accent-orange{border-top-color:var(--orange)}.accent-green{border-top-color:var(--green)}.accent-blue{border-top-color:var(--blue)}.accent-purple{border-top-color:var(--purple)}.accent-teal{border-top-color:var(--teal)}
+.event-grid{display:grid;grid-template-columns:1fr .8fr;gap:60px;align-items:center}.event-panel{background:var(--cream);border:1px solid #f0e5d5;border-radius:28px;padding:34px}.event-panel ul{padding-left:20px;color:var(--muted)}.event-badge{display:inline-block;padding:7px 12px;border-radius:999px;background:var(--orange);color:white;font-size:.78rem;font-weight:800;margin-bottom:16px}
+.section-dark{background:var(--navy);color:#fff}.section-heading.light h2,.section-heading.light p,.section-dark h3{color:#fff}.section-heading.light .section-kicker{color:#ffb14e}.leadership-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.leader-card{padding:26px;border:1px solid rgba(255,255,255,.15);border-radius:20px;background:rgba(255,255,255,.06)}.leader-card p{color:#d5dfeb;margin-bottom:0;font-size:.95rem}
+.join-section{background:linear-gradient(135deg,#fffaf3,#f4fbff)}.join-card{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center;background:#fff;border:1px solid var(--line);padding:46px;border-radius:30px;box-shadow:0 20px 60px rgba(21,54,93,.08)}.join-card p{color:var(--muted)}.join-actions{display:flex;flex-direction:column;gap:12px}.footer{padding:34px 0;background:#0f2745;color:#fff}.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer p{margin:4px 0 0;color:#c9d6e5}.footer-right{display:flex;flex-direction:column;align-items:flex-end;color:#c9d6e5}
+@media(max-width:900px){.hero-grid,.split,.event-grid,.join-card{grid-template-columns:1fr}.hero-art{min-height:380px}.cards{grid-template-columns:repeat(2,1fr)}.leadership-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none;position:absolute;left:0;right:0;top:74px;background:white;padding:22px 4%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.menu-toggle{display:block}}
+@media(max-width:620px){.hero{padding-top:64px}.cards,.leadership-grid{grid-template-columns:1fr}.hero-art{min-height:330px}.orbit-1{width:320px;height:320px}.orbit-2{width:240px;height:240px}.heart-card{right:40px;top:90px;width:210px}.s2{left:0}.s4{left:0}.section{padding:70px 0}.footer-grid{flex-direction:column;align-items:flex-start}.footer-right{align-items:flex-start}}
+
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand" aria-label="Words That Heal home">
+        <span class="brand-mark">WTH</span>
+        <span class="brand-text">Words That Heal</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#what-we-do">What We Do</a>
+        <a href="#events">Events</a>
+        <a href="#leadership">Leadership</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsxZ33LMQreuda-r54yNhyQ62naUmLNF110vDpgDMTdADAng/viewform?usp=header" class="nav-cta" target="_blank" rel="noopener noreferrer">Join Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Coming Fall 2026</span>
+          <h1>Words can heal.<br><span>Understanding can transform care.</span></h1>
+          <p class="hero-text">Words That Heal is a student organization dedicated to language access, effective communication, and compassionate healthcare. We prepare future healthcare professionals to recognize communication barriers and advocate for every patient to be heard and understood.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfsxZ33LMQreuda-r54yNhyQ62naUmLNF110vDpgDMTdADAng/viewform?usp=header" target="_blank" rel="noopener noreferrer">Become a Member</a>
+            <a class="btn btn-secondary" href="mailto:wordsthathealuf@gmail.com">Contact Us</a>
+          </div>
+          <div class="microcopy">No language experience required. Open to students of all majors.</div>
+        </div>
+        <div class="hero-art" aria-label="Language and healthcare illustration">
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="speech s1">Hello</div>
+          <div class="speech s2">Hola</div>
+          <div class="speech s3">Bonjou</div>
+          <div class="speech s4">你好</div>
+          <div class="heart-card">
+            <div class="heart">♥</div>
+            <div class="pulse">⌁⌁⌁</div>
+            <div class="heart-label">Every patient deserves to be understood.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <div>
+          <span class="section-kicker">Our Mission</span>
+          <h2>Communication is an essential part of care.</h2>
+        </div>
+        <div class="prose">
+          <p>Words That Heal raises awareness about the importance of language access and effective communication in healthcare. Our mission is to educate future healthcare professionals about the challenges language barriers can create in patient care and the vital role of qualified medical interpreters.</p>
+          <p>We welcome students of all majors, backgrounds, and language abilities. Our goal is not to replace professional interpreters, but to help future clinicians recognize barriers to communication, understand when interpreters should be used, and become stronger advocates for their patients.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="what-we-do">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">What We Do</span>
+          <h2>Learn. Serve. Connect. Advocate.</h2>
+          <p>Programming is designed to combine education, service, and real-world healthcare communication.</p>
+        </div>
+        <div class="cards">
+          <article class="card accent-red">
+            <div class="card-icon">🗣️</div>
+            <h3>Medical Language Workshops</h3>
+            <p>Explore useful healthcare communication concepts across languages while learning the ethical limits of non-certified interpretation.</p>
+          </article>
+          <article class="card accent-orange">
+            <div class="card-icon">🎤</div>
+            <h3>Guest Speakers</h3>
+            <p>Hear from physicians, interpreters, public health professionals, and community leaders working at the intersection of language and medicine.</p>
+          </article>
+          <article class="card accent-green">
+            <div class="card-icon">🤝</div>
+            <h3>Community Outreach</h3>
+            <p>Participate in service projects, health education events, and partnerships with organizations serving diverse patient populations.</p>
+          </article>
+          <article class="card accent-blue">
+            <div class="card-icon">💬</div>
+            <h3>Communication Simulations</h3>
+            <p>Experience interactive scenarios that demonstrate how language barriers can affect trust, informed consent, safety, and quality of care.</p>
+          </article>
+          <article class="card accent-purple">
+            <div class="card-icon">📣</div>
+            <h3>Advocacy & Awareness</h3>
+            <p>Help create campaigns and events that raise awareness about language access and patient-centered communication in healthcare.</p>
+          </article>
+          <article class="card accent-teal">
+            <div class="card-icon">🌎</div>
+            <h3>Interdisciplinary Connection</h3>
+            <p>Connect with students across medicine, nursing, public health, pharmacy, dentistry, languages, and other fields.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="events">
+      <div class="container event-grid">
+        <div>
+          <span class="section-kicker">Signature Programming</span>
+          <h2>Lost in Translation</h2>
+          <p class="lead">An interactive healthcare communication simulation designed to show how easily meaning can be lost when patients and providers do not share a common language.</p>
+          <p>Participants work through realistic scenarios and then discuss the role of qualified interpreters, communication strategies, patient safety, and trust.</p>
+        </div>
+        <div class="event-panel">
+          <span class="event-badge">Planned for Fall 2026</span>
+          <h3>Other events may include</h3>
+          <ul>
+            <li>Interpreter panels</li>
+            <li>Medical Spanish & Haitian Creole workshops</li>
+            <li>ASL and accessibility programming</li>
+            <li>Community health outreach</li>
+            <li>Healthcare communication speaker series</li>
+            <li>Language access awareness campaigns</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="leadership">
+      <div class="container">
+        <div class="section-heading light">
+          <span class="section-kicker">Leadership</span>
+          <h2>Help shape the organization from the beginning.</h2>
+          <p>Words That Heal is being built as a collaborative student organization with opportunities to lead, create programming, and build community partnerships.</p>
+        </div>
+        <div class="leadership-grid">
+          <div class="leader-card"><h3>President</h3><p>Leads the organization, coordinates programming, and develops strategic partnerships.</p></div>
+          <div class="leader-card"><h3>Vice President</h3><p>Supports operations, programming, and executive board coordination.</p></div>
+          <div class="leader-card"><h3>Treasurer</h3><p>Oversees organizational finances, budgeting, funding requests, and financial records.</p></div>
+          <div class="leader-card"><h3>Community Relations</h3><p>Builds relationships with local organizations, student groups, clinics, and service partners.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section join-section" id="join">
+      <div class="container join-card">
+        <div>
+          <span class="section-kicker">Join Words That Heal</span>
+          <h2>Help build a future where every patient can be heard.</h2>
+          <p>Membership is open to students of all majors and language abilities. Whether you're interested in healthcare, languages, service, public health, or patient advocacy, there is a place for you here.</p>
+        </div>
+        <div class="join-actions">
+          <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfsxZ33LMQreuda-r54yNhyQ62naUmLNF110vDpgDMTdADAng/viewform?usp=header" target="_blank" rel="noopener noreferrer">Sign Up Here</a>
+          <a class="btn btn-secondary" href="mailto:wordsthathealuf@gmail.com">wordsthathealuf@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Words That Heal</strong>
+        <p>Communication • Compassion • Understanding</p>
+      </div>
+      <div class="footer-right">
+        <a href="mailto:wordsthathealuf@gmail.com">wordsthathealuf@gmail.com</a>
+        <span>Coming Fall 2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.nav-links');
+
+toggle?.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+  });
+});
+
+</script>
+</body>
+</html>
